@@ -59,6 +59,7 @@ img { display: block; max-width: 100%; }
     position: relative;
     z-index: 1;
 }
+
 /* =========================================
    2. 導覽列 - 全新設計
    ========================================= */
@@ -209,52 +210,8 @@ img { display: block; max-width: 100%; }
     transform: rotate(-45deg) translate(8px, -8px);
 }
 
-/* RWD 響應式 */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 80px;
-        right: -100%;
-        width: 280px;
-        height: calc(100vh - 80px);
-        background: rgba(10, 14, 39, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 3rem 0;
-        gap: 0;
-        border-left: 1px solid var(--border-color);
-        transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .nav-links a {
-        padding: 1.2rem 2rem;
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .nav-links a::before {
-        left: -100%;
-    }
-
-    .nav-links a:hover::before {
-        left: 0;
-    }
-
-    .nav-links a::after {
-        display: none;
-    }
-}
 /* =========================================
-   3. 🔥 Hero 區塊 - 全新酷炫設計（這整段是新的）
+   3. Hero 區塊 - 全新酷炫設計
    ========================================= */
 .hero-section {
     min-height: 100vh;
@@ -265,7 +222,7 @@ img { display: block; max-width: 100%; }
     overflow: hidden;
 }
 
-/* ✨ 新增：動態粒子背景 */
+/* 動態粒子背景 */
 .particles {
     position: absolute;
     width: 100%;
@@ -307,7 +264,7 @@ img { display: block; max-width: 100%; }
     }
 }
 
-/* ✨ 修改：光暈效果增強 */
+/* 光暈效果增強 */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -339,7 +296,7 @@ img { display: block; max-width: 100%; }
     width: 100%;
 }
 
-/* ✨ 新增：狀態徽章 */
+/* 狀態徽章 */
 .greeting-badge {
     display: inline-flex;
     align-items: center;
@@ -367,13 +324,13 @@ img { display: block; max-width: 100%; }
     50% { opacity: 0.3; }
 }
 
-/* ✨ 修改：標題加上 Glitch 效果 */
+/* 標題加上 Glitch 效果 */
 .hero-text h1 { 
     font-size: 4.5rem; 
     margin-bottom: 1.5rem;
-    line-height: 1.4;  /* 增加行高 */
+    line-height: 1.4;
     font-weight: 800;
-    word-break: keep-all;  /* 防止斷字 */
+    word-break: keep-all;
 }
 
 .glitch {
@@ -435,7 +392,7 @@ img { display: block; max-width: 100%; }
     font-weight: 600;
 }
 
-/* ✨ 修改：程式碼風格簡介 */
+/* 程式碼風格簡介 */
 .hero-text .bio {
     color: var(--text-secondary);
     margin-bottom: 3rem;
@@ -453,12 +410,12 @@ img { display: block; max-width: 100%; }
     font-weight: 700;
 }
 
-/* ✨ 新增：數據統計 */
+/* 數據統計 */
 .stats-row {
     display: flex;
-    gap: 5rem;  /* 從 3rem 改成 5rem，讓兩個項目分散更均勻 */
+    gap: 5rem;
     margin-bottom: 3rem;
-    justify-content: flex-start;  /* 新增：靠左對齊 */
+    justify-content: flex-start;
 }
 
 .stat-item {
@@ -484,7 +441,7 @@ img { display: block; max-width: 100%; }
     letter-spacing: 1px;
 }
 
-/* ✨ 修改：大頭貼 - 科技框架升級版 */
+/* 大頭貼 - 科技框架升級版 */
 .hero-image {
     position: relative;
     display: flex;
@@ -501,7 +458,7 @@ img { display: block; max-width: 100%; }
     align-items: center;
 }
 
-/* ✨ 新增：四角框架 */
+/* 四角框架 */
 .corner {
     position: absolute;
     width: 60px;
@@ -550,7 +507,7 @@ img { display: block; max-width: 100%; }
     }
 }
 
-/* ✨ 新增：掃描線 */
+/* 掃描線 */
 .scan-line {
     position: absolute;
     width: 100%;
@@ -588,7 +545,7 @@ img { display: block; max-width: 100%; }
         inset 0 0 30px rgba(0, 217, 255, 0.2);
 }
 
-/* ✨ 新增：漂浮標籤 */
+/* 漂浮標籤 */
 .floating-tags {
     position: absolute;
     width: 100%;
@@ -623,7 +580,7 @@ img { display: block; max-width: 100%; }
     }
 }
 
-/* ✨ 修改：按鈕升級 */
+/* 按鈕升級 */
 .social-links {
     display: flex;
     gap: 1.5rem;
@@ -954,6 +911,7 @@ img { display: block; max-width: 100%; }
 .tag.sensor { color: #ff7979; background: rgba(255, 121, 121, 0.15); border-color: rgba(255, 121, 121, 0.3); }
 .tag.steam { color: #00adee; background: rgba(0, 173, 238, 0.15); border-color: rgba(0, 173, 238, 0.3); }
 .tag.體感互動 { color: #ffbe76; background: rgba(255, 190, 118, 0.15); border-color: rgba(255, 190, 118, 0.3); }
+
 /* =========================================
    7. 聯絡區塊 - 全新設計
    ========================================= */
@@ -1210,29 +1168,6 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* RWD 響應式 */
-@media (max-width: 768px) {
-    .contact-header h2 {
-        font-size: 2.5rem;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-right {
-        text-align: center;
-    }
-    
-}
-
 /* =========================================
    8. Modal
    ========================================= */
@@ -1426,14 +1361,18 @@ footer {
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 3rem;
     }
     
-    .hero-text h1 { font-size: 3.5rem;
-     line-height: 1.4; }
+    .hero-text h1 { 
+        font-size: 3rem;
+        line-height: 1.4; 
+    }
     
     .image-frame {
         width: 350px;
         height: 350px;
+        margin: 0 auto;
     }
     
     .image-frame img {
@@ -1444,45 +1383,133 @@ footer {
     .stats-row {
         justify-content: center;
     }
+    
+    .floating-tags {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero-text h1 { font-size: 2.5rem; 
-    line-height: 1.5;}
-    .hero-text h2 { font-size: 1.5rem; }
-    
-    .image-frame {
+    /* 導覽列手機版 */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
         width: 280px;
-        height: 280px;
+        height: calc(100vh - 80px);
+        background: rgba(10, 14, 39, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 3rem 0;
+        gap: 0;
+        border-left: 1px solid var(--border-color);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        padding: 1.2rem 2rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-links a::before {
+        left: -100%;
+    }
+
+    .nav-links a:hover::before {
+        left: 0;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    /* Hero 區塊 */
+    .hero-section {
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 60px;
     }
     
-    .image-frame img {
+    .hero-container {
+        gap: 2rem;
+    }
+    
+    .hero-text h1 { 
+        font-size: 2rem; 
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-text h2 { 
+        font-size: 1.3rem;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-text .bio {
+        font-size: 0.95rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* 大頭貼 */
+    .image-frame {
         width: 250px;
         height: 250px;
     }
     
+    .image-frame img {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .corner {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .floating-tags,
+    .scan-line {
+        display: none;
+    }
+    
+    /* 統計數據 */
     .stats-row {
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
+    }
+    
+    /* 按鈕 */
+    .social-links {
         flex-direction: column;
-        gap: 2rem;
+        width: 100%;
+        gap: 1rem;
     }
     
-    .nav-links { display: none; }
-    
-    .section-title { font-size: 2rem; }
-    
-    .contact-info {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    .modal-content {
-        width: 95%;
-        margin: 10px;
-    }
-    
-    .modal-header,
-    .modal-body {
-        padding: 2rem 1.5rem;
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 28px;
+        font-size: 0.95rem;
     }
     
     .greeting-badge {
@@ -1490,13 +1517,166 @@ footer {
         padding: 8px 16px;
     }
     
-    .social-links {
-        flex-direction: column;
-        width: 100%;
+    /* 區塊間距 */
+    .section { 
+        padding: 60px 0;
     }
     
-    .btn {
-        width: 100%;
-        justify-content: center;
+    .section-title { 
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    /* 技能卡片 */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skill-card {
+        padding: 1.5rem;
+    }
+    
+    .skill-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* 作品集 */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+    }
+    
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* 聯絡區塊 */
+    .contact-header h2 {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+    
+    .contact-subtitle {
+        font-size: 1rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* 頁尾 */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-right {
+        text-align: center;
+    }
+    
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        max-width: 95%;
+        margin: 10px;
+        max-height: 85vh;
+    }
+    
+    .modal-header {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.8rem;
+        padding-right: 30px;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .modal-body p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+    
+    .close-btn {
+        font-size: 2rem;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .gallery-title {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+    
+    .modal-gallery-grid img {
+        flex: 0 0 150px;
+        height: 100px;
+    }
+    
+    /* 容器 */
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    /* 粒子效果 */
+    .particles {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 { 
+        font-size: 1.8rem; 
+    }
+    
+    .hero-text h2 { 
+        font-size: 1.2rem;
+    }
+    
+    .image-frame {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .image-frame img {
+        width: 190px;
+        height: 190px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .section-title { 
+        font-size: 1.8rem;
+    }
+    
+    .contact-header h2 {
+        font-size: 1.8rem;
     }
 }
