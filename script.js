@@ -713,10 +713,9 @@ window.addEventListener('scroll', () => {
    ========================================= */
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
-
 if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation(); // 防止事件冒泡
+        e.stopPropagation();
         menuToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
@@ -737,7 +736,6 @@ if (menuToggle && navLinks) {
         }
     });
 }
-
 // 捲動時改變導覽列樣式
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
