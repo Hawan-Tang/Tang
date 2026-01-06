@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林唐逸 Tang | Unity Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-content">
+        <a href="#" class="logo">Tang<span class="dot">.</span>Dev</a>
+        
+        <!-- 漢堡選單按鈕 -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">關於</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#projects">作品集</a></li>
+            <li><a href="#contact">聯絡</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <!-- ==================== 🔥 這整段是新的 Hero 設計 ==================== -->
+<section id="about" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-text hidden">
+                <!-- ✨ 新增：狀態徽章 -->
+                <div class="greeting-badge">
+                    <span class="status-dot"></span>
+                    <span>Available for Projects</span>
+                </div>
+                
+                <!-- ✨ 修改：標題加上 glitch 效果和 data-text 屬性 -->
+<h1>
+    你好，我是
+    <span class="highlight glitch" data-text="林唐逸 (Tang)">林唐逸 (Tang)</span>
+</h1>
+                
+                <h2 class="typing-text">Unity Developer</h2>
+                
+                <!-- ✨ 修改：簡介改成程式碼風格 -->
+                <p class="bio">
+                    <span class="code-bracket">{</span><br>
+                    &nbsp;&nbsp;熱愛技術挑戰，追求極致開發品質。<br>
+                    &nbsp;&nbsp;致力於將創新解決方案落地實踐，賦予程式碼生命。<br>
+                    <span class="code-bracket">}</span>
+                </p>
+                
+                <!-- ✨ 新增：數據統計區塊 -->
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="40">0</div>
+                        <div class="stat-label">專案經驗</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">年資</div>
+                    </div>
+                </div>
+                
+                <!-- ✨ 修改：按鈕加上圖標 -->
+<div class="social-links">
+    <a href="#projects" class="btn btn-primary">
+        <i class="fas fa-folder-open"></i>
+        專案介紹
+    </a>
+    <a href="#contact" class="btn btn-outline">
+        <i class="fas fa-envelope"></i>
+        聯絡我
+    </a>
+</div>
+            </div>
+            
+            <!-- ✨ 修改：圖片區塊全新設計 -->
+            <div class="hero-image hidden delay-200">
+                <div class="image-frame">
+                    <!-- 新增：四個角落框架 -->
+                    <div class="corner corner-tl"></div>
+                    <div class="corner corner-tr"></div>
+                    <div class="corner corner-bl"></div>
+                    <div class="corner corner-br"></div>
+                    
+                    <img src="https://valley-astronomy-253.notion.site/image/attachment%3Ad05bf5ca-ec2c-4823-bf51-70011477a77f%3A26311D00-9798-46BD-8916-444607D1F69E.jpg?table=block&id=2614a175-899a-8040-97f0-f6a2684ceab0&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=2000&userId=&cache=v2" alt="Tang Profile">
+                    
+                    <!-- 新增：掃描線 -->
+                    <div class="scan-line"></div>
+                </div>
+                
+                <!-- 新增：漂浮標籤 -->
+                <div class="floating-tags">
+                    <span class="float-tag" style="--delay: 0s;">Unity</span>
+                    <span class="float-tag" style="--delay: 0.5s;">VR/AR</span>
+                    <span class="float-tag" style="--delay: 1s;">C#</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ✨ 新增：粒子背景效果 -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </section>
+    <!-- ==================== Hero 區塊結束 ==================== -->
+<section id="skills" class="section">
+    <div class="container">
+        <h2 class="section-title hidden">專業技能</h2>
+        <div class="skills-grid">
+            <div class="skill-card hidden">
+                <h3>VR 虛擬實境</h3>
+                <ul>
+                    <li>一體機</li>
+                    <li>有線/無線串流</li>
+                    <li>手部辨識</li>
+                    <li>HTC、Oculus、Pico...</li>
+                </ul>
+            </div>
+            <div class="skill-card hidden delay-100">
+                <h3>AR 擴增實境</h3>
+                <ul>
+                    <li>圖形辨識</li>
+                    <li>平面偵測</li>
+                    <li>物理偵測</li>
+                    <li>臉部辨識</li>
+                </ul>
+            </div>
+            <div class="skill-card hidden delay-200">
+                <h3>MR 混合實境</h3>
+                <ul>
+                    <li>虛實整合</li>
+                    <li>通透交互</li>
+                </ul>
+            </div>
+            <div class="skill-card hidden delay-300">
+                <h3>多人連線</h3>
+                <ul>
+                    <li>Socket</li>
+                    <li>廣播</li>
+                </ul>
+            </div>
+            
+            <div class="skill-card hidden delay-400">
+                <h3>軟硬體串接</h3>
+                <ul>
+                    <li>體感座椅</li>
+                    <li>Arduino</li>
+                    <li>Kinect</li>
+                    <li>URG/A-GUI</li>
+                    <li>紅外線雷射</li>
+                </ul>
+            </div>
+            <div class="skill-card hidden">
+                <h3>AI應用</h3>
+                <ul>
+                    <li>整合AI服務</li>
+                    <li>繪圖</li>
+                    <li>文字</li>
+                    <li>API</li>
+                </ul>
+            </div>
+            <div class="skill-card hidden delay-100">
+                <h3>資料庫</h3>
+                <ul>
+                    <li>Firebase</li>
+                    <li>Storage</li>
+                    <li>RealtimeDatabase</li>
+                </ul>
+            </div>
+            <div class="skill-card hidden delay-200">
+                <h3>效能優化</h3>
+                <ul>
+                    <li>效能分析</li>
+                    <li>記憶體管理</li>
+                </ul>
+            </div>
+            
+            <div class="skill-card hidden delay-300">
+                <h3>資源管理</h3>
+                <ul>
+                    <li>Addressable</li>
+                    <li>AssetBundle</li>
+                </ul>
+            </div>
+            <div class="skill-card hidden delay-400">
+                <h3>Unity編輯器</h3>
+                <ul>
+                    <li>自定義編輯器</li>
+                    <li>工具開發</li>
+                </ul>
+            </div>
+            <div class="skill-card hidden">
+                <h3>3D技術</h3>
+                <ul>
+                    <li>GaussianSplatting</li>
+                    <li>PLY</li>
+                    <li>裸視3D</li>
+                </ul>
+            </div>
+            <div class="skill-card hidden delay-100">
+                <h3>互動開發</h3>
+                <ul>
+                    <li>展場互動</li>
+                    <li>LineBot商家</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title hidden">精選作品</h2>
+            <div class="projects-grid" id="project-container">
+                <!-- JS 會自動生成內容 -->
+            </div>
+        </div>
+    </section>
+
+ <section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="contact-wrapper hidden">
+            <div class="contact-header">
+                <span class="contact-badge">
+                    <i class="fas fa-paper-plane"></i>
+                    Get In Touch
+                </span>
+                <h2>讓我們一起創造<br><span class="highlight">精彩專案</span></h2>
+                <p class="contact-subtitle">對我的作品感興趣？歡迎隨時與我聯繫</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:he01409918@gmail.com">he01409918@gmail.com</a>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <span>0900-7788-13</span>
+                    <div class="card-glow"></div>
+                </div>
+
+<div class="contact-card">
+    <div class="card-icon">
+        <i class="fas fa-map-marker-alt"></i>
+    </div>
+    <h3>Location</h3>
+    <span>台灣 台南<br>Taiwan Tainan</span>
+    <div class="card-glow"></div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景裝飾 -->
+    <div class="contact-bg-decoration">
+        <div class="decoration-circle circle-1"></div>
+        <div class="decoration-circle circle-2"></div>
+        <div class="decoration-line line-1"></div>
+        <div class="decoration-line line-2"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-left">
+            <p class="footer-logo">Tang<span class="dot">.</span>Dev</p>
+            <p class="footer-tagline">Building the future with code</p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2026 Tang Developer. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- 彈出視窗 (Modal) -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            
+            <div class="modal-header">
+                <h2 id="modal-title">專案標題</h2>
+                <div id="modal-tags" class="tags"></div>
+            </div>
+
+            <div class="modal-body">
+                <img id="modal-main-img" src="" alt="Main Image" class="modal-hero-img">
+                <p id="modal-desc">這裡會顯示詳細介紹...</p>
+                
+                <h4 class="gallery-title">更多截圖</h4>
+                <div id="modal-gallery" class="modal-gallery-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
