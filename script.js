@@ -714,8 +714,9 @@ window.addEventListener('scroll', () => {
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // 防止事件冒泡
         menuToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
@@ -726,6 +727,14 @@ if (menuToggle) {
             menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
         });
+    });
+
+    // 點擊外部區域關閉選單
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
     });
 }
 
@@ -738,3 +747,69 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 });
+
+/* =========================================
+   7. 側邊導航欄與進度條功能
+   ========================================= */
+const sideNavLinks = document.querySelectorAll('.side-nav-link');
+const progressBar = document.querySelector('.progress-bar::before') || document.querySelector('.progress-bar');
+const sections = document.querySelectorAll('.section, .hero-section');
+
+// 更新進度條
+function updateProgressBar() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+    
+    // 使用 CSS 變數更新進度
+    document.documentElement.style.setProperty('--scroll-progress', scrollPercent + '%');
+}
+
+// 更新 active 狀態
+function updateActiveSection() {
+    let currentSection = '';
+    const scrollPos = window.pageYOffset + 200;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            currentSection = sectionId;
+        }
+    });
+
+    sideNavLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('data-section') === currentSection) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// 監聽滾動事件
+window.addEventListener('scroll', () => {
+    updateProgressBar();
+    updateActiveSection();
+});
+
+// 點擊導航連結
+sideNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// 初始化
+updateProgressBar();
+updateActiveSection();
