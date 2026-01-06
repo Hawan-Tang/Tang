@@ -1780,7 +1780,7 @@ footer {
 
 /* 手機版隱藏側邊欄 */
 @media (max-width: 1024px) {
-    .side-nav {
+    /* .side-nav {
         display: none;
-    }
+    } */
 }
