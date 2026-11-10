@@ -3,6 +3,94 @@
    ========================================= */
 const projectData = [
     {
+        title: "殭屍燒烤屋 Zombie BBQ House",
+        desc: "第一人稱合作經營模擬遊戲，1～8 人線上合作，Steam 遊戲。",
+        tags: ["PC", "Steam", "多人連線"],
+        image: "assets/works/zombie/cover.jpg",
+        icon: "assets/works/zombie/icon.png",
+        link: { label: "Steam 商店頁", url: "https://store.steampowered.com/app/5365860" },
+        details: "殭屍災難過後，城市發現殭屍其實很好吃，於是有人開了一間專賣殭屍的燒烤店。玩家要在門口觀察體型、走路和眼神，揪出偽裝的殭屍，再拆解、燒烤、端給客人；看錯人就會被警察通緝，被抓後可以繳保釋金或等隊友劫獄。晚上 10 點後，對面的殭屍賭場開門營業。\n支援單人與最多 8 人線上合作，10 種語言。",
+        gallery: [
+            "assets/works/zombie/cover.jpg",
+            "assets/works/zombie/ss1.jpg",
+            "assets/works/zombie/ss2.jpg",
+            "assets/works/zombie/ss3.jpg",
+            "assets/works/zombie/ss4.jpg",
+            "assets/works/zombie/ss5.jpg",
+            "assets/works/zombie/ss6.jpg"
+        ]
+    },
+    {
+        title: "柑仔店後面 Stock Den",
+        desc: "1994 年台北地下號子的股票 × 多人 × 互整遊戲，最多 9 人一桌，Steam 遊戲。",
+        tags: ["PC", "Steam", "多人連線"],
+        image: "assets/works/stockden/cover.jpg",
+        icon: "assets/works/stockden/icon.png",
+        link: { label: "Steam 商店頁", url: "https://store.steampowered.com/app/5459660" },
+        details: "1994 年台北，柑仔店後面藏著一間地下號子。打電話下單、盯電視牆，跟大家搶同一檔股票；看別人賺錢不爽，就剪他電話線、放假消息、買通名嘴。\n股價由玩家的買賣單逐筆撮合，大單真的推得動價格。另有 11 章劇情模式、三種對局模式、秘密任務與每日挑戰排行榜。單人可以跟電腦常客玩，多人最多 9 人一桌（真人最多 8 位），支援 16 種語言。",
+        gallery: [
+            "assets/works/stockden/cover.jpg",
+            "assets/works/stockden/ss1.jpg",
+            "assets/works/stockden/ss2.jpg",
+            "assets/works/stockden/ss3.jpg",
+            "assets/works/stockden/ss4.jpg",
+            "assets/works/stockden/ss5.jpg",
+            "assets/works/stockden/ss6.jpg"
+        ]
+    },
+    {
+        title: "偷偷收集中 Sneaky Collector",
+        desc: "住在 Windows 桌面上的放置收集遊戲，上班打字就會自動打怪。",
+        tags: ["PC", "Steam", "多人連線"],
+        image: "assets/works/sneaky/cover.jpg",
+        icon: "assets/works/sneaky/icon.png",
+        details: "角色住在桌面最下方的透明層，不擋工作；平常打字，角色就會跟著打怪。可以轉蛋收集 101 種職業的像素角色、換裝、填圖鑑，也能和 Steam 好友合作、語音聊天。\n技術上用 Win32 做透明、置頂、可點穿的桌面視窗，以全域 Raw Input 監聽鍵盤；像素角色由自製的程式生成套件產出，並串接 Steamworks 成就與 Steam P2P 連線。",
+        gallery: [
+            "assets/works/sneaky/cover.jpg",
+            "assets/works/sneaky/ss1.jpg",
+            "assets/works/sneaky/ss2.jpg",
+            "assets/works/sneaky/ss3.jpg",
+            "assets/works/sneaky/ss4.jpg",
+            "assets/works/sneaky/ss5.jpg"
+        ]
+    },
+    {
+        title: "What The Frog",
+        desc: "Steam 多人語音派對遊戲，鬼抓人加踢罐子。（開發中）",
+        tags: ["PC", "Steam", "多人連線"],
+        image: "assets/works/frog/cover.jpg",
+        details: "分成鬼與人兩個陣營的多人語音派對遊戲，被抓到的人可以等隊友來救。\n自己寫了 Steam P2P 傳輸層與 Steam Lobby 配對，讓 Dissonance 語音改走 Steam 網路傳輸；衝刺殘影用 BakeMesh 搭配物件池化。",
+        gallery: [
+            "assets/works/frog/cover.jpg",
+            "assets/works/frog/ss2.jpg",
+            "assets/works/frog/ss3.jpg"
+        ]
+    },
+    {
+        title: "鬥陣作伙玩－樂齡體感互動訓練系統",
+        desc: "給長輩的 AI 姿態辨識體感遊戲，一支網路攝影機、免穿戴就能玩。",
+        tags: ["PC", "Webcam", "體感互動", "AI 姿態辨識", "MediaPipe"],
+        image: "assets/works/agetech/cover.jpg",
+        details: "為社區照顧關懷據點的 55 歲以上長者設計。以 Unity 搭配 Google MediaPipe 做姿態辨識，可同時追蹤 2 人，免穿戴、免手持、全程離線，家人和孫輩也能一起玩。\n收錄四款遊戲：擦窗戶（上肢與肩關節）、眼明手快（反應與手眼協調）、一二三過牆（平衡與全身協調）、你追我跑（腿力與耐力）。",
+        gallery: [
+            "assets/works/agetech/cover.jpg"
+        ]
+    },
+    {
+        title: "AutoFlow Hub 多頻道自動發文系統",
+        desc: "自己寫的桌面工具，管理四個短影音頻道，從排程、文案到發佈全自動。",
+        tags: ["PC", "Python", "Playwright", "Claude API"],
+        cover: "AutoFlow Hub",
+        details: "四條短片產線（Unity 物理模擬、Steam 遊戲推坑、2D 卡通動畫、three.js 3D 動畫）做好的影片，會自動進到 AutoFlow Hub 的庫存。系統照每天自訂的時段加上隨機區間排程，各平台錯開發片；每支影片先用 ffmpeg 抽出畫面交給 Claude API，再依各平台規則改寫成不同版本的文案。\n自動發佈到 YouTube、Instagram、Facebook、Threads、TikTok、X 等平台，大多以 Playwright 瀏覽器自動化完成，Threads 另接官方 API；也會自動整理 IG 與 YouTube 留言，產生粉絲點播名單。"
+    },
+    {
+        title: "Claude Code 開發工具組",
+        desc: "為自己的 AI 開發流程寫的 Claude Code 擴充與 Windows Terminal 工具。",
+        tags: ["PC", "Claude Code", "PowerShell", "Electron"],
+        cover: "Claude Code\nTools",
+        details: "自建多個 Claude Code skill（短片產線、動工前的需求確認流程），以及 hooks 擴充：對話裡的本機圖片點一下就開置頂檢視窗、自訂狀態列顯示模型與用量、工作完成時跳通知並切回對應視窗。\n另外改寫開源專案 pixel-agent-desk，做成 Windows Terminal 的 Claude 對話面板，可以看到每個分頁的對話狀態並一鍵跳過去。"
+    },
+    {
         title: "NBA BOX 互動體驗",
         desc: "結合 Kinect 體感偵測與 VR 技術的多人連線沉浸式投籃競技系統。",
         tags: ["Android", "PC", "Kinect" , "多人連線" , "手部辨識" , "Server" , "Client"],
@@ -79,7 +167,7 @@ const projectData = [
     desc: "跨平台即時通訊社交應用，支援文字與語音通話。",
     tags: ["PC", "Android", "IOS"],
     image: "https://valley-astronomy-253.notion.site/image/attachment%3A476ea911-5d70-48ea-8d3a-59f29dc13981%3Aimage.png?table=block&id=2614a175-899a-808d-ad5d-fab64f2f80c7&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=580&userId=&cache=v2",
-    details: "全功能線上社交平台，提供即時文字訊息、語音通話、用戶配對等服務。採用 WebSocket 實現低延遲通訊，支援多媒體內容傳輸。跨平台架構設計，確保 PC、Android、iOS 端一致的使用體驗。\n平台網址：https://chancemeet.me/",
+    details: "全功能線上社交平台，提供即時文字訊息、語音通話、用戶配對等服務。採用 WebSocket 實現低延遲通訊，支援多媒體內容傳輸。跨平台架構設計，確保 PC、Android、iOS 端一致的使用體驗。",
     gallery: [
         "https://valley-astronomy-253.notion.site/image/attachment%3A476ea911-5d70-48ea-8d3a-59f29dc13981%3Aimage.png?table=block&id=2614a175-899a-808d-ad5d-fab64f2f80c7&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=580&userId=&cache=v2",
         "https://valley-astronomy-253.notion.site/image/attachment%3A0b4f53a4-3430-47a1-b0a4-d4ffa9eac4b1%3Aimage.png?table=block&id=2614a175-899a-80d5-8cdf-dc85955ef113&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=660&userId=&cache=v2",
@@ -468,346 +556,211 @@ const projectData = [
     gallery: ["https://valley-astronomy-253.notion.site/image/attachment%3Add235e21-1ca5-4c87-9663-d172c82cb2b0%3Aimage.png?table=block&id=18d4a175-899a-8091-8758-ffcf33a55425&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=1140&userId=&cache=v2"]
 }
 ];
-/* =========================================
-   2. 程式邏輯區
-   ========================================= */
-const projectContainer = document.getElementById('project-container');
-const modal = document.getElementById('project-modal');
-
-function renderProjects() {
-    if (!projectContainer) return;
-
-    let htmlContent = '';
-    
-    projectData.forEach((project, index) => {
-        const tagHtml = project.tags.map(tag => {
-            const tagLower = tag.toLowerCase().replace(/\s+/g, '-');
-            return `<span class="tag ${tagLower}">${tag}</span>`;
-        }).join('');
-
-        const delayClass = `delay-${(index % 4) * 100}`;
-
-        htmlContent += `
-        <article class="project-card hidden ${delayClass}">
-            <div class="card-image" onclick="openModal(${index})">
-                <img src="${project.image}" alt="${project.title}">
-                <div class="overlay">
-                    <span class="view-hint">點擊查看</span>
-                </div>
-            </div>
-            <div class="card-content">
-                <div class="tags">${tagHtml}</div>
-                <h3>${project.title}</h3>
-                <p>${project.desc}</p>
-            </div>
-        </article>
-        `;
-    });
-
-    projectContainer.innerHTML = htmlContent;
-}
-
-function openModal(index) {
-    const data = projectData[index];
-    
-    document.getElementById('modal-title').innerText = data.title;
-    const detailText = data.details || data.desc;
-    const detailWithLinks = detailText.replace(
-        /(https?:\/\/[^\s]+)/g, 
-        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
-    );
-    document.getElementById('modal-desc').innerHTML = detailWithLinks;
-    document.getElementById('modal-main-img').src = data.image;
-    
-    const tagsContainer = document.getElementById('modal-tags');
-    tagsContainer.innerHTML = data.tags.map(tag => {
-        const tagLower = tag.toLowerCase().replace(/\s+/g, '-');
-        return `<span class="tag ${tagLower}">${tag}</span>`;
-    }).join('');
-
-    const galleryContainer = document.getElementById('modal-gallery');
-    const galleryTitle = document.querySelector('.gallery-title');
-
-    if (data.gallery && data.gallery.length > 0) {
-        galleryContainer.innerHTML = data.gallery.map(imgUrl => 
-            `<img src="${imgUrl}" onclick="changeMainImage(this.src)">`
-        ).join('');
-        galleryTitle.style.display = 'block';
-    } else {
-        galleryContainer.innerHTML = '';
-        galleryTitle.style.display = 'none';
-    }
-
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    
-    if (galleryContainer) galleryContainer.scrollLeft = 0;
-}
-
-function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-function changeMainImage(src) {
-    document.getElementById('modal-main-img').src = src;
-}
-
-if (modal) {
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-}
-
-renderProjects();
 
 /* =========================================
-   3. 動畫特效區
+   2. 個人照片與技能（在這裡修改文字）
    ========================================= */
-// 打字機效果
-const textElement = document.querySelector('.typing-text');
-const texts = ["Unity Developer", "VR/AR Specialist", "Game Engineer"];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
+const PROFILE_PHOTO = 'https://valley-astronomy-253.notion.site/image/attachment%3Ad05bf5ca-ec2c-4823-bf51-70011477a77f%3A26311D00-9798-46BD-8916-444607D1F69E.jpg?table=block&id=2614a175-899a-8040-97f0-f6a2684ceab0&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=2000&userId=&cache=v2';
 
-(function type() {
-    if (!textElement) return;
+// 技能清單（由上到下顯示；第一張會放大反白）
+const SKILLS = [
+    { name: 'Unity 開發', items: ['C#', 'Addressable / AssetBundle', '效能分析與記憶體管理', '自定義編輯器工具', 'Timeline / Cinemachine', 'PC / Android / iOS / Steam 發行'] },
+    { name: 'VR 虛擬實境', items: ['HTC Vive', 'Apple Vision Pro', 'Meta Quest 2 / 3', 'Pico', 'OpenXR / XR Interaction Toolkit', '手部追蹤', '有線 / 無線串流'] },
+    { name: 'AR / MR', items: ['圖形辨識', '平面偵測', '臉部辨識', 'Quest 3 MR Passthrough', 'MR Utility Kit', '虛實整合'] },
+    { name: '軟硬體串接', items: ['Kinect', 'Webcam', 'Arduino', '藍牙 BLE 感測器', '體感座椅', '紅外線雷射', 'URG / A-GUI', 'Ricoh Theta 360'] },
+    { name: '影像辨識', items: ['MediaPipe 姿態辨識', '多人同時追蹤', '手勢 / 動作判定', '人臉捕捉合成', '顏色辨識'] },
+    { name: '渲染與 3D', items: ['URP / HDRP', 'Shader Graph', '自寫 Shader', 'VFX Graph', '3D 高斯潑濺（3DGS）', '點雲 PLY', '裸視 3D', 'Spine 2D'] },
+    { name: '多人連線', items: ['WebSocket / Socket.IO', 'WebRTC', 'Steam P2P / Lobby', 'Netcode for GameObjects', 'Photon', 'UDP / TCP', 'Dissonance 語音'] },
+    { name: '後端與雲端', items: ['Firebase Auth / Firestore', 'Realtime Database / Storage', 'Steamworks 成就 / 統計', 'Steam Cloud 存檔', '綠界 ECPay 金流', 'Excel / CSV 紀錄匯出'] },
+    { name: 'AI 開發', items: ['LLM / 生成式 AI 串接', 'MCP 協作', '離線語音辨識 + LLM 評分', 'TTS 語音合成 / Whisper 字幕', 'AI 繪圖 / 生成', 'LineBot', '終端機 AI 工作流（Windows Terminal）', 'Claude Code skill / hooks'] },
+    { name: 'AI 自動化與經營', items: ['短片自動產線（Unity / three.js / 2D 動畫）', 'AutoFlow Hub 排程發佈', '7 平台自動發文', 'Claude 依平台改寫文案', 'Claude 瀏覽器自動化', '自媒體經營（4 個頻道）', '系統 / 流程管理'] },
+    { name: 'Web', items: ['HTML / CSS / JavaScript', 'WebAR / WebGL'] }
+];
 
-    if (count === texts.length) {
-        count = 0;
-    }
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
+/* =========================================
+   3. 展區分類（依 tags 與標題自動判斷）
+   ========================================= */
+const ZONES = ['VR', 'AR', '互動裝置', '遊戲 / App / 工具'];
+const ZONE_LETTERS = ['A', 'B', 'C', 'D'];
+const PLATFORM_TAGS = ['PC', 'Android', 'IOS', 'Steam'];
+const PLATFORM_LABEL = { PC: 'PC', Android: 'Android', IOS: 'iOS', Steam: 'Steam' };
+const INSTALLATION_TAGS = ['Kinect', 'Sensor', 'Arduino', '雷達', '體感座椅', '體感互動', '投影互動', 'Webcam', '手部辨識', '眼動'];
 
-    textElement.textContent = letter;
-    
-    let typeSpeed = 100;
+function zoneOf(p) {
+    if (p.zone && ZONES.includes(p.zone)) return p.zone;   // 想手動指定時，在作品資料加 zone: "VR"（或 AR、互動裝置、遊戲 / App / 工具）
+    if (p.tags.includes('VR') || /VR/.test(p.title)) return 'VR';
+    if (p.tags.includes('AR') || /AR/.test(p.title)) return 'AR';
+    if (p.tags.some(t => INSTALLATION_TAGS.includes(t))) return '互動裝置';
+    return '遊戲 / App / 工具';
+}
 
-    if (letter.length === currentText.length) {
-        count++;
-        index = 0;
-        typeSpeed = 2000; 
-    }
-
-    setTimeout(type, typeSpeed);
-}());
-
-// 捲動浮現動畫
-setTimeout(() => {
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
+const PROJECTS = projectData.map((p, i) => {
+    const zone = zoneOf(p);
+    return {
+        ...p,
+        index: i,
+        no: String(i + 1).padStart(2, '0'),
+        zone,
+        zi: ZONES.indexOf(zone),
+        platforms: p.tags.filter(t => PLATFORM_TAGS.includes(t)).map(t => PLATFORM_LABEL[t]),
+        tech: p.tags.filter(t => !PLATFORM_TAGS.includes(t)),
+        gallery: [...new Set([p.image, ...(p.gallery || [])].filter(Boolean))]
     };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
-        });
-    }, observerOptions);
-
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((el) => observer.observe(el));
-}, 100);
-
-// 平滑捲動
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
 });
 
 /* =========================================
-   4. 畫廊拖曳功能
+   4. 畫面
    ========================================= */
-const gallery = document.getElementById('modal-gallery');
-let isDown = false;
-let startX;
-let scrollLeft;
+const $ = id => document.getElementById(id);
+const grid = $('grid');
+const filters = $('filters');
+const detail = $('detail');
+const detailBody = $('detail-body');
+let filter = 'all';
+let current = -1;
+let lastFocus = null;
 
-gallery.addEventListener('mousedown', (e) => {
-    isDown = true;
-    gallery.classList.add('active');
-    startX = e.pageX - gallery.offsetLeft;
-    scrollLeft = gallery.scrollLeft;
-});
-
-gallery.addEventListener('mouseleave', () => {
-    isDown = false;
-    gallery.classList.remove('active');
-});
-
-gallery.addEventListener('mouseup', () => {
-    isDown = false;
-    gallery.classList.remove('active');
-    
-    setTimeout(() => {
-        gallery.querySelectorAll('img').forEach(img => img.style.pointerEvents = 'auto');
-    }, 50);
-});
-
-gallery.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    
-    e.preventDefault();
-    const x = e.pageX - gallery.offsetLeft;
-    const walk = (x - startX) * 2;
-    gallery.scrollLeft = scrollLeft - walk;
-
-    if (Math.abs(walk) > 5) {
-        gallery.querySelectorAll('img').forEach(img => img.style.pointerEvents = 'none');
-    }
-});
-/* =========================================
-   🔥 5. 新增：數字計數動畫
-   ========================================= */
-function animateCounter() {
-    const counters = document.querySelectorAll('.stat-number');
-    
-    counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000;
-        const step = target / (duration / 16);
-        let current = 0;
-        
-        const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-                counter.textContent = target + '+';
-                clearInterval(timer);
-            } else {
-                counter.textContent = Math.floor(current) + '+';
-            }
-        }, 16);
-    });
+function esc(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+function linkify(text) {
+    return esc(text).replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
 }
 
-// 當頁面載入時執行數字動畫
-window.addEventListener('load', () => {
-    setTimeout(animateCounter, 500); // 延遲 0.5 秒後開始動畫
-});
+const visible = () => PROJECTS.filter(p => filter === 'all' || p.zone === filter);
 
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-/* =========================================
-   6. 導覽列互動功能
-   ========================================= */
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // 點擊連結後關閉選單
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-        });
-    });
-
-    // 點擊外部區域關閉選單
-    document.addEventListener('click', (e) => {
-        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-        }
-    });
+function renderFilters() {
+    const items = [{ key: 'all', label: '全部', letter: '◎', n: PROJECTS.length }]
+        .concat(ZONES.map((z, i) => ({ key: z, label: z, letter: ZONE_LETTERS[i], n: PROJECTS.filter(p => p.zone === z).length })))
+        .filter(f => f.n > 0);
+    filters.innerHTML = items.map(f => `
+        <button type="button" class="zone${f.key === filter ? ' on' : ''}" data-filter="${esc(f.key)}" aria-pressed="${f.key === filter}">
+            <span class="letter">${f.letter}</span><span class="name">${esc(f.label)}</span><span class="n">${f.n}</span>
+        </button>`).join('');
 }
-// 捲動時改變導覽列樣式
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+
+function renderGrid() {
+    grid.innerHTML = visible().map((p, k) => `
+        <button type="button" class="card" data-open="${p.index}" style="animation-delay:${Math.min(k, 12) * 30}ms">
+            <div class="card-top"><span class="card-no">No.${p.no}</span><span class="card-zone">${ZONE_LETTERS[p.zi]} ${esc(p.zone)}</span></div>
+            ${p.image
+                ? `<div class="card-img"><img src="${esc(p.image)}" alt="" loading="lazy" decoding="async"></div>`
+                : `<div class="card-img text-cover"><span>${esc(p.cover || p.title)}</span></div>`}
+            <h3>${p.icon ? `<img class="card-icon" src="${esc(p.icon)}" alt="">` : ''}${esc(p.title)}</h3>
+            <p class="meta">${esc(p.tech.slice(0, 3).join(' · ') || p.platforms.join(' · '))}</p>
+        </button>`).join('');
+}
+
+function renderSkills() {
+    $('skills').innerHTML = SKILLS.map((s, i) => `
+        <div class="skill${i === 0 ? ' lead' : ''}">
+            <h3>${esc(s.name)}</h3>
+            <ul>${s.items.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+        </div>`).join('');
+}
+
+/* =========================================
+   5. 展品說明牌（詳情）
+   ========================================= */
+function plateHTML(p) {
+    return `
+        <div class="plate-bar">
+            <span>${ZONE_LETTERS[p.zi]} 區 — ${esc(p.zone)}</span>
+            <div class="nav">
+                <button type="button" data-prev aria-label="上一件">←</button>
+                <button type="button" data-next aria-label="下一件">→</button>
+                <button type="button" class="x" data-close aria-label="關閉">×</button>
+            </div>
+        </div>
+        <div class="detail-scroll">
+            <div class="plate-no">No.<span>${p.no}</span></div>
+            <div class="plate-title">
+                ${p.icon ? `<img class="plate-icon" src="${esc(p.icon)}" alt="">` : ''}
+                <h2>${esc(p.title)}</h2>
+            </div>
+            ${p.link ? `<a class="plate-link" href="${esc(p.link.url)}" target="_blank" rel="noopener noreferrer">${esc(p.link.label)} ↗</a>` : ''}
+            ${p.image ? `<img class="detail-hero" src="${esc(p.image)}" alt="${esc(p.title)}">` : ''}
+            ${p.gallery.length > 1 ? `<div class="thumbs">${p.gallery.map((g, i) => `
+                <button type="button" data-img="${esc(g)}" class="${i === 0 ? 'current' : ''}" aria-label="圖片 ${i + 1}">
+                    <img src="${esc(g)}" alt="" loading="lazy">
+                </button>`).join('')}</div>` : ''}
+            <dl class="spec">
+                <div><dt>平台</dt><dd>${esc(p.platforms.join('、') || '—')}</dd></div>
+                <div><dt>技術</dt><dd>${esc(p.tech.join('、') || '—')}</dd></div>
+            </dl>
+            <p class="lead">${esc(p.desc)}</p>
+            <p class="body">${linkify(p.details || '')}</p>
+        </div>`;
+}
+
+function open(index) {
+    if (detail.hidden) lastFocus = document.activeElement;
+    current = index;
+    detailBody.innerHTML = plateHTML(PROJECTS[index]);
+    detailBody.setAttribute('aria-label', PROJECTS[index].title);
+    detail.hidden = false;
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => detail.classList.add('open'));
+    const closeBtn = detailBody.querySelector('[data-close]');
+    if (closeBtn) closeBtn.focus({ preventScroll: true });
+    history.replaceState(null, '', '#p' + (index + 1));
+}
+
+function close() {
+    detail.classList.remove('open');
+    document.body.style.overflow = '';
+    history.replaceState(null, '', location.pathname + location.search);
+    setTimeout(() => { if (!detail.classList.contains('open')) detail.hidden = true; }, 300);
+    if (lastFocus) lastFocus.focus({ preventScroll: true });
+}
+
+function step(dir) {
+    const list = visible();
+    const k = list.findIndex(p => p.index === current);
+    const next = list[(k + dir + list.length) % list.length];
+    if (next) open(next.index);
+}
+
+/* =========================================
+   6. 事件
+   ========================================= */
+document.addEventListener('click', e => {
+    const f = e.target.closest('[data-filter]');
+    if (f) {
+        filter = f.dataset.filter;
+        renderFilters();
+        renderGrid();
+        const works = $('works');
+        if (works.getBoundingClientRect().top < 0) works.scrollIntoView({ behavior: 'smooth' });
+        return;
+    }
+    const o = e.target.closest('[data-open]');
+    if (o) { open(Number(o.dataset.open)); return; }
+    if (e.target.closest('[data-close]') || e.target === detail) { close(); return; }
+    if (e.target.closest('[data-prev]')) { step(-1); return; }
+    if (e.target.closest('[data-next]')) { step(1); return; }
+    const img = e.target.closest('[data-img]');
+    if (img) {
+        detailBody.querySelector('.detail-hero').src = img.dataset.img;
+        detailBody.querySelectorAll('[data-img]').forEach(b => b.classList.toggle('current', b === img));
     }
 });
 
+document.addEventListener('keydown', e => {
+    if (detail.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') step(1);
+    if (e.key === 'ArrowLeft') step(-1);
+});
+
 /* =========================================
-   7. 側邊導航欄與進度條功能
+   7. 初始化
    ========================================= */
-const sideNavLinks = document.querySelectorAll('.side-nav-link');
-const progressBar = document.querySelector('.progress-bar::before') || document.querySelector('.progress-bar');
-const sections = document.querySelectorAll('.section, .hero-section');
+document.querySelectorAll('[data-count]').forEach(el => { el.textContent = PROJECTS.length; });
+document.querySelectorAll('[data-photo]').forEach(el => { el.src = PROFILE_PHOTO; });
+renderFilters();
+renderGrid();
+renderSkills();
 
-// 更新進度條
-function updateProgressBar() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollPercent = (scrollTop / scrollHeight) * 100;
-    
-    // 使用 CSS 變數更新進度
-    document.documentElement.style.setProperty('--scroll-progress', scrollPercent + '%');
-}
-
-// 更新 active 狀態
-function updateActiveSection() {
-    let currentSection = '';
-    const scrollPos = window.pageYOffset + 200;
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        const sectionId = section.getAttribute('id');
-
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-            currentSection = sectionId;
-        }
-    });
-
-    sideNavLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('data-section') === currentSection) {
-            link.classList.add('active');
-        }
-    });
-}
-
-// 監聽滾動事件
-window.addEventListener('scroll', () => {
-    updateProgressBar();
-    updateActiveSection();
-});
-
-// 點擊導航連結
-sideNavLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// 初始化
-updateProgressBar();
-updateActiveSection();
+const hashMatch = location.hash.match(/^#p(\d+)$/);
+if (hashMatch && PROJECTS[Number(hashMatch[1]) - 1]) open(Number(hashMatch[1]) - 1);
