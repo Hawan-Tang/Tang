@@ -55,18 +55,6 @@ const projectData = [
         ]
     },
     {
-        title: "What The Frog",
-        desc: "Steam 多人語音派對遊戲，鬼抓人加踢罐子。（開發中）",
-        tags: ["PC", "Steam", "多人連線"],
-        image: "assets/works/frog/cover.jpg",
-        details: "分成鬼與人兩個陣營的多人語音派對遊戲，被抓到的人可以等隊友來救。\n自己寫了 Steam P2P 傳輸層與 Steam Lobby 配對，讓 Dissonance 語音改走 Steam 網路傳輸；衝刺殘影用 BakeMesh 搭配物件池化。",
-        gallery: [
-            "assets/works/frog/cover.jpg",
-            "assets/works/frog/ss2.jpg",
-            "assets/works/frog/ss3.jpg"
-        ]
-    },
-    {
         title: "鬥陣作伙玩－樂齡體感互動訓練系統",
         desc: "給長輩的 AI 姿態辨識體感遊戲，一支網路攝影機、免穿戴就能玩。",
         tags: ["PC", "Webcam", "體感互動", "AI 姿態辨識", "MediaPipe"],
@@ -75,20 +63,6 @@ const projectData = [
         gallery: [
             "assets/works/agetech/cover.jpg"
         ]
-    },
-    {
-        title: "AutoFlow Hub 多頻道自動發文系統",
-        desc: "自己寫的桌面工具，管理四個短影音頻道，從排程、文案到發佈全自動。",
-        tags: ["PC", "Python", "Playwright", "Claude API"],
-        cover: "AutoFlow Hub",
-        details: "四條短片產線（Unity 物理模擬、Steam 遊戲推坑、2D 卡通動畫、three.js 3D 動畫）做好的影片，會自動進到 AutoFlow Hub 的庫存。系統照每天自訂的時段加上隨機區間排程，各平台錯開發片；每支影片先用 ffmpeg 抽出畫面交給 Claude API，再依各平台規則改寫成不同版本的文案。\n自動發佈到 YouTube、Instagram、Facebook、Threads、TikTok、X 等平台，大多以 Playwright 瀏覽器自動化完成，Threads 另接官方 API；也會自動整理 IG 與 YouTube 留言，產生粉絲點播名單。"
-    },
-    {
-        title: "Claude Code 開發工具組",
-        desc: "為自己的 AI 開發流程寫的 Claude Code 擴充與 Windows Terminal 工具。",
-        tags: ["PC", "Claude Code", "PowerShell", "Electron"],
-        cover: "Claude Code\nTools",
-        details: "自建多個 Claude Code skill（短片產線、動工前的需求確認流程），以及 hooks 擴充：對話裡的本機圖片點一下就開置頂檢視窗、自訂狀態列顯示模型與用量、工作完成時跳通知並切回對應視窗。\n另外改寫開源專案 pixel-agent-desk，做成 Windows Terminal 的 Claude 對話面板，可以看到每個分頁的對話狀態並一鍵跳過去。"
     },
     {
         title: "NBA BOX 互動體驗",
@@ -567,9 +541,9 @@ const SKILLS = [
     { name: 'Unity 開發', items: ['C#', 'Addressable / AssetBundle', '效能分析與記憶體管理', '自定義編輯器工具', 'Timeline / Cinemachine', 'PC / Android / iOS / Steam 發行'] },
     { name: 'VR 虛擬實境', items: ['HTC Vive', 'Apple Vision Pro', 'Meta Quest 2 / 3', 'Pico', 'OpenXR / XR Interaction Toolkit', '手部追蹤', '有線 / 無線串流'] },
     { name: 'AR / MR', items: ['圖形辨識', '平面偵測', '臉部辨識', 'Quest 3 MR Passthrough', 'MR Utility Kit', '虛實整合'] },
-    { name: '軟硬體串接', items: ['Kinect', 'Webcam', 'Arduino', '藍牙 BLE 感測器', '體感座椅', '紅外線雷射', 'URG / A-GUI', 'Ricoh Theta 360'] },
+    { name: '軟硬體串接', items: ['Kinect', 'Webcam', 'Arduino', '藍牙 BLE 感測器', '體感座椅', '紅外線雷射', 'URG / A-GUI'] },
     { name: '影像辨識', items: ['MediaPipe 姿態辨識', '多人同時追蹤', '手勢 / 動作判定', '人臉捕捉合成', '顏色辨識'] },
-    { name: '渲染與 3D', items: ['URP / HDRP', 'Shader Graph', '自寫 Shader', 'VFX Graph', '3D 高斯潑濺（3DGS）', '點雲 PLY', '裸視 3D', 'Spine 2D'] },
+    { name: '渲染與 3D', items: ['URP / HDRP', 'Shader Graph', 'VFX Graph', '3D 高斯潑濺（3DGS）', '點雲 PLY', '裸視 3D', 'Spine 2D'] },
     { name: '多人連線', items: ['WebSocket / Socket.IO', 'WebRTC', 'Steam P2P / Lobby', 'Netcode for GameObjects', 'Photon', 'UDP / TCP', 'Dissonance 語音'] },
     { name: '後端與雲端', items: ['Firebase Auth / Firestore', 'Realtime Database / Storage', 'Steamworks 成就 / 統計', 'Steam Cloud 存檔', '綠界 ECPay 金流', 'Excel / CSV 紀錄匯出'] },
     { name: 'AI 開發', items: ['LLM / 生成式 AI 串接', 'MCP 協作', '離線語音辨識 + LLM 評分', 'TTS 語音合成 / Whisper 字幕', 'AI 繪圖 / 生成', 'LineBot', '終端機 AI 工作流（Windows Terminal）', 'Claude Code skill / hooks'] },

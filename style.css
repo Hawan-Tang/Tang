@@ -162,11 +162,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ===== 技能清單 ===== */
 .equip { padding: 0 var(--gutter) clamp(40px, 6vw, 72px); border-bottom: 2px solid var(--rule); }
 #skills {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
+    columns: 4;
+    column-gap: 12px;
 }
 .skill {
+    break-inside: avoid;
+    margin-bottom: 12px;
     display: flex; flex-direction: column;
     padding: 18px 18px 20px;
     background: #f8f6f0;
@@ -175,10 +176,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .skill:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink); }
 .skill h3 { margin: 0 0 14px; font: 900 clamp(20px, 1.8vw, 24px)/1.25 var(--tc); }
-.skill ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.skill ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
 .skill li { padding: 3px 10px; border: 1px solid var(--rule); border-radius: 99px; font-size: 13.5px; background: var(--paper); }
 /* 第一張（Unity）放大、反白 */
-.skill.lead { grid-column: span 2; background: var(--ink); color: var(--paper); }
+.skill.lead { column-span: all; margin-bottom: 14px; background: var(--ink); color: var(--paper); }
 .skill.lead h3 { font-size: clamp(26px, 2.6vw, 36px); }
 .skill.lead li { background: transparent; border-color: #5d5a53; color: var(--paper); }
 .skill.lead:hover { box-shadow: 6px 6px 0 var(--accent); }
@@ -260,7 +261,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     .top nav { gap: 14px; }
     .hero { grid-template-columns: 1fr; }
     .hero-photo { order: -1; width: 56%; max-width: 260px; }
-    #skills { grid-template-columns: 1fr 1fr; gap: 10px; }
+    #skills { columns: 2; column-gap: 10px; }
+    .skill { margin-bottom: 10px; }
     .skill { padding: 14px; }
 
     .zone { padding: 12px 16px; }
@@ -279,11 +281,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 @media (max-width: 1080px) and (min-width: 821px) {
-    #skills { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    #skills { columns: 3; }
 }
 @media (max-width: 480px) {
-    #skills { grid-template-columns: 1fr; }
-    .skill.lead { grid-column: auto; }
+    #skills { columns: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
