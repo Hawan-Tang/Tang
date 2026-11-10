@@ -62,7 +62,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .hero h1 .tc { display: block; margin-top: .3em; font: 900 .42em/1.15 var(--tc); letter-spacing: 0; }
 
+.lede {
+    max-width: 34em;
+    margin: -8px 0 26px;
+    font: 500 clamp(16px, 1.35vw, 19px)/1.75 var(--tc);
+    color: #2c2a26;
+}
 .colophon { border-top: 2px solid var(--rule); }
+.colophon a.mail { text-decoration: none; border-bottom: 2px solid var(--accent); }
+.colophon a.mail:hover { color: var(--accent); }
 .colophon div {
     display: grid; grid-template-columns: 7.5em 1fr;
     padding: 9px 0;
