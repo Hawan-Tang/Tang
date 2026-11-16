@@ -78,6 +78,13 @@ const projectData = [
         ]
     },
     {
+        title: "VR無人機證照訓練",
+        desc: "依無人機考照術科標準設計的 VR 飛行訓練系統，整合實體遙控器，採教官端與學員端架構。",
+        tags: ["PC", "VR", "Sensor", "多人連線"],
+        details: "系統內容\n・訓練題目涵蓋 I 級 7 題、G1 10 題術科，以及任務型訓練題目\n・飛行過程即時判定違規項目，訓練結束依 KPI 項目加權自動評分\n・教官端可排課、選擇學員與題目，同時監控多位學員的飛行狀態，並即時切換天氣、觸發事件\n\n技術內容\n・遙控器整合：以 USB HID 讀取 T16 無人機遙控器，支援熱插拔偵測，依型號自動設定軸向\n・飛行模擬：姿態模式／定位模式切換，模擬風力、重量飄移、起降擾動、地面效應與障礙物反作用力\n・異常模擬：掉電、低電量處置、輸入延遲\n・飛行資料記錄：逐筆記錄位置、高度、姿態角、垂直／水平速度、飛行模式、電量與任務進度，匯出 CSV\n・即時畫面串流：學員畫面以 TCP 串流至教官端，提供上帝、自由、學員、無人機四種視角\n・訓練回放（AAR）：自行設計檔案傳輸協定，分塊串流並以 CRC32 校驗，教官可回放每次訓練過程\n・環境：動態天氣、日照時間與海面模擬",
+        gallery: []
+    },
+    {
         title: "Line智慧哈比",
         desc: "整合多模態 AI 服務的 LineBot 智能助理平台。",
         tags: ["Android" , "Line" , "AI"],
@@ -319,17 +326,6 @@ const projectData = [
         "https://valley-astronomy-253.notion.site/image/attachment%3Aa6d9cece-d6cb-4c67-af5b-3186f8bdb96b%3Aimage.png?table=block&id=18d4a175-899a-806f-8724-c48313771c58&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=1420&userId=&cache=v2",
         "https://valley-astronomy-253.notion.site/image/attachment%3A1d4a623a-76f3-415b-8214-246c62f05a7f%3Aimage.png?table=block&id=18d4a175-899a-80d4-a444-fd368c445626&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=1420&userId=&cache=v2",
         "https://valley-astronomy-253.notion.site/image/attachment%3Afecb13b4-13a2-496e-a75c-685cc6075297%3Aimage.png?table=block&id=18d4a175-899a-8008-ac0e-f15cec5cb3f8&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=1420&userId=&cache=v2"
-    ]
-},
-{
-    title: "VR無人機證照訓練",
-    desc: "符合證照考試標準的 VR 無人機飛行模擬器。",
-    tags: ["Android", "VR", "Sensor"],
-    image: "https://valley-astronomy-253.notion.site/image/attachment%3A5cb83e02-ebfd-4973-8bc7-06a0af875d6a%3Aimage.png?table=block&id=18d4a175-899a-80ae-af75-de7d56164f6a&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=1420&userId=&cache=v2",
-    details: "依據無人機證照考試設計 7 項術科題目，整合實體遙控器進行操作。VR 環境模擬真實飛行物理與氣象條件，提供安全且經濟的訓練方案。支援成績記錄與錯誤分析功能。",
-    gallery: [
-        "https://valley-astronomy-253.notion.site/image/attachment%3A5cb83e02-ebfd-4973-8bc7-06a0af875d6a%3Aimage.png?table=block&id=18d4a175-899a-80ae-af75-de7d56164f6a&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=1420&userId=&cache=v2",
-        "https://valley-astronomy-253.notion.site/image/attachment%3A8fd5554d-9c9f-421f-9542-4307f9b9fe27%3AS__67469347.jpg?table=block&id=18d4a175-899a-8016-8797-e539500aba3c&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=960&userId=&cache=v2"
     ]
 },
 {
