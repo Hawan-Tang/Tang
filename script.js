@@ -538,16 +538,16 @@ const PROFILE_PHOTO = 'https://valley-astronomy-253.notion.site/image/attachment
 
 // 技能清單（由上到下顯示；第一張會放大反白）
 const SKILLS = [
-    { name: 'Unity 開發', items: ['C#', 'Addressable / AssetBundle', '效能分析與記憶體管理', '自定義編輯器工具', 'Timeline / Cinemachine', 'PC / Android / iOS / Steam 發行'] },
-    { name: 'VR 虛擬實境', items: ['HTC Vive', 'Apple Vision Pro', 'Meta Quest 2 / 3', 'Pico', 'OpenXR / XR Interaction Toolkit', '手部追蹤', '有線 / 無線串流'] },
+    { name: 'Unity 開發', items: ['C#', 'Addressable / AssetBundle', '效能分析與記憶體管理', '自定義編輯器工具', 'Timeline / Cinemachine', 'PC / Android / iOS / Steam 發行', '高齡科技（AgeTech）互動應用'] },
+    { name: 'VR 虛擬實境', items: ['HTC Vive', 'Apple Vision Pro', 'Meta Quest 2 / 3', 'Pico', 'OpenXR / XR Interaction Toolkit', '手部追蹤', '有線 / 無線串流', 'VR 職業訓練'] },
     { name: 'AR / MR', items: ['圖形辨識', '平面偵測', '臉部辨識', 'Quest 3 MR Passthrough', 'MR Utility Kit', '虛實整合'] },
     { name: '軟硬體串接', items: ['Kinect', 'Webcam', 'Arduino', '藍牙 BLE 感測器', '體感座椅', '紅外線雷射', 'URG / A-GUI'] },
     { name: '影像辨識', items: ['MediaPipe 姿態辨識', '多人同時追蹤', '手勢 / 動作判定', '人臉捕捉合成', '顏色辨識'] },
     { name: '渲染與 3D', items: ['URP / HDRP', 'Shader Graph', 'VFX Graph', '3D 高斯潑濺（3DGS）', '點雲 PLY', '裸視 3D', 'Spine 2D'] },
-    { name: '多人連線', items: ['WebSocket / Socket.IO', 'WebRTC', 'Steam P2P / Lobby', 'Netcode for GameObjects', 'Photon', 'UDP / TCP', 'Dissonance 語音'] },
+    { name: '多人連線', items: ['WebSocket / Socket.IO', 'WebRTC', 'Steam P2P / Lobby', 'Photon', 'UDP / TCP'] },
     { name: '後端與雲端', items: ['Firebase Auth / Firestore', 'Realtime Database / Storage', 'Steamworks 成就 / 統計', 'Steam Cloud 存檔', '綠界 ECPay 金流', 'Excel / CSV 紀錄匯出'] },
-    { name: 'AI 開發', items: ['LLM / 生成式 AI 串接', 'MCP 協作', '離線語音辨識 + LLM 評分', 'TTS 語音合成 / Whisper 字幕', 'AI 繪圖 / 生成', 'LineBot', '終端機 AI 工作流（Windows Terminal）', 'Claude Code skill / hooks'] },
-    { name: 'AI 自動化與經營', items: ['短片自動產線（Unity / three.js / 2D 動畫）', 'AutoFlow Hub 排程發佈', '7 平台自動發文', 'Claude 依平台改寫文案', 'Claude 瀏覽器自動化', '自媒體經營（4 個頻道）', '系統 / 流程管理'] },
+    { name: 'AI 開發', items: ['LLM / 生成式 AI 串接', 'MCP 協作', '離線語音辨識 + LLM 評分', 'AI 配音（GPT-SoVITS / F5-TTS / 台語 TTS）', 'AI 繪圖 / 生成', 'LineBot', 'Claude Code Skill', 'AI Agent'] },
+    { name: 'AI 自動化與經營', items: ['短片自動產線', '自動剪輯', '排程發布', '自動回復', 'Claude 瀏覽器自動化', '自媒體經營', '系統 / 流程管理'] },
     { name: 'Web', items: ['HTML / CSS / JavaScript', 'WebAR / WebGL'] }
 ];
 
