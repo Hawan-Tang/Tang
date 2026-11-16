@@ -326,7 +326,7 @@ const projectData = [
     desc: "符合證照考試標準的 VR 無人機飛行模擬器。",
     tags: ["Android", "VR", "Sensor"],
     image: "https://valley-astronomy-253.notion.site/image/attachment%3A5cb83e02-ebfd-4973-8bc7-06a0af875d6a%3Aimage.png?table=block&id=18d4a175-899a-80ae-af75-de7d56164f6a&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=1420&userId=&cache=v2",
-    details: "依據無人機證照考試設計 7 項術科題目，整合實體遙控器進行操作。VR 環境模擬真實飛行物理與氣象條件，提供安全且經濟的訓練方案。支援成績記錄與錯誤分析功能。\nhttps://www.youtube.com/watch?v=yJ7U0GW7TK0",
+    details: "依據無人機證照考試設計 7 項術科題目，整合實體遙控器進行操作。VR 環境模擬真實飛行物理與氣象條件，提供安全且經濟的訓練方案。支援成績記錄與錯誤分析功能。",
     gallery: [
         "https://valley-astronomy-253.notion.site/image/attachment%3A5cb83e02-ebfd-4973-8bc7-06a0af875d6a%3Aimage.png?table=block&id=18d4a175-899a-80ae-af75-de7d56164f6a&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=1420&userId=&cache=v2",
         "https://valley-astronomy-253.notion.site/image/attachment%3A8fd5554d-9c9f-421f-9542-4307f9b9fe27%3AS__67469347.jpg?table=block&id=18d4a175-899a-8016-8797-e539500aba3c&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=960&userId=&cache=v2"
