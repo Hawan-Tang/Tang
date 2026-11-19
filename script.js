@@ -59,9 +59,11 @@ const projectData = [
         desc: "給長輩的 AI 姿態辨識體感遊戲，一支網路攝影機、免穿戴就能玩。",
         tags: ["PC", "Webcam", "體感互動", "AI 姿態辨識", "MediaPipe"],
         image: "assets/works/agetech/cover.jpg",
-        details: "為社區照顧關懷據點的 55 歲以上長者設計。以 Unity 搭配 Google MediaPipe 做姿態辨識，可同時追蹤 2 人，免穿戴、免手持、全程離線，家人和孫輩也能一起玩。\n收錄四款遊戲：擦窗戶（上肢與肩關節）、眼明手快（反應與手眼協調）、一二三過牆（平衡與全身協調）、你追我跑（腿力與耐力）。",
+        details: "為社區照顧關懷據點的 55 歲以上長者設計。偏鄉據點缺師資，活動多是帶動唱、內容重複，長者坐著看久了就不來；市售體感設備要手持或穿戴、字小又多是外文，長者不會用；據點交成果也只能報簽到人次，看不出身體有沒有進步。\n只要一台電視、一支網路攝影機和一台迷你電腦，長者走到電視前舉手就能玩，站著、坐著都可以，也能和朋友或孫子兩人比賽。本案由我負責系統研發，並提案參加數位發展部「AgeTech 數位友善大賞」，預計在高雄阿蓮社區照顧關懷據點驗證 50 位長者。\n\n四款遊戲，一款練一種能力\n・擦窗戶：窗戶起霧又沾泥巴，雙手當抹布來回擦，擦乾淨就看見窗外；練上肢活動與肩關節，記錄擦淨面數與左右手移動量\n・眼明手快：孫子把東西丟過來，看圈的顏色用左手、右手或雙手接，臭襪子、魚骨頭不能接；練反應與手眼協調，記錄左右手接到、漏接、誤接\n・一二三過牆：牆從路的盡頭推過來，照動作小卡擺出牆洞的姿勢穿過去；練平衡與全身協調，記錄各動作成功率\n・你追我跑：在懷舊國小操場原地抬腿、擺手追孫子；練腿力與耐力，記錄距離、速度與左右腳抬腿次數\n\n技術內容\n・姿態辨識：Unity 搭配 Google MediaPipe，同時追蹤 2 人、各 33 個身體點，手掌就是游標，停留即選取，免按鍵、免打字\n・人像分割：即時去背，把長者本人放進懷舊街道、三合院、國小操場等場景\n・AI 台語配音：以台羅拼音合成台語語音，預存成音檔離線播放，玩完馬上用台語鼓勵\n・難度依表現自動調整，失誤時孫子會安慰「無要緊！」\n・會員系統：第一次來挑一個圖示當身分，之後點自己的圖示就登入，免帳號密碼；社工後台可填性別、出生年與備註\n・成效分析：每局自動記錄動作數據，比較左右側差異，用第一個月對比最近一個月判定進步、持平或退步，一鍵匯出 Excel 月報、季報與前後測\n・全程離線：不需網路、不存影像，資料只留在據點電腦",
         gallery: [
-            "assets/works/agetech/cover.jpg"
+            "assets/works/agetech/cover.jpg",
+            "assets/works/agetech/ss1.jpg",
+            "assets/works/agetech/ss2.jpg"
         ]
     },
     {
@@ -694,7 +696,54 @@ function step(dir) {
 /* =========================================
    6. 事件
    ========================================= */
+/* 放大看圖 */
+const lightbox = $('lightbox');
+const lbImg = $('lb-img');
+let lbList = [];
+let lbIdx = 0;
+
+function heroList() {
+    const p = PROJECTS[current];
+    return p.gallery.length ? p.gallery : [p.image];
+}
+function showHero(src) {
+    const hero = detailBody.querySelector('.detail-hero');
+    if (hero) hero.src = src;
+    detailBody.querySelectorAll('[data-img]').forEach(b => b.classList.toggle('current', b.dataset.img === src));
+}
+function lbShow(i) {
+    lbIdx = (i + lbList.length) % lbList.length;
+    lbImg.src = lbList[lbIdx];
+    lightbox.classList.remove('actual');
+    lightbox.scrollTo(0, 0);
+    showHero(lbList[lbIdx]);
+}
+function lbOpen() {
+    const hero = detailBody.querySelector('.detail-hero');
+    lbList = heroList();
+    lightbox.classList.toggle('single', lbList.length < 2);
+    lbShow(Math.max(0, lbList.indexOf(hero.getAttribute('src'))));
+    lightbox.hidden = false;
+    requestAnimationFrame(() => lightbox.classList.add('open'));
+    lightbox.querySelector('[data-lb-close]').focus({ preventScroll: true });
+}
+function lbClose() {
+    lightbox.classList.remove('open', 'actual');
+    lightbox.hidden = true;
+    const hero = detailBody.querySelector('.detail-hero');
+    if (hero) hero.focus({ preventScroll: true });
+}
+
+lightbox.addEventListener('click', e => {
+    e.stopPropagation();
+    if (e.target.closest('[data-lb-prev]')) return lbShow(lbIdx - 1);
+    if (e.target.closest('[data-lb-next]')) return lbShow(lbIdx + 1);
+    if (e.target === lbImg) return lightbox.classList.toggle('actual');
+    lbClose();
+});
+
 document.addEventListener('click', e => {
+    if (e.target.closest('.detail-hero')) { lbOpen(); return; }
     const f = e.target.closest('[data-filter]');
     if (f) {
         filter = f.dataset.filter;
@@ -710,13 +759,16 @@ document.addEventListener('click', e => {
     if (e.target.closest('[data-prev]')) { step(-1); return; }
     if (e.target.closest('[data-next]')) { step(1); return; }
     const img = e.target.closest('[data-img]');
-    if (img) {
-        detailBody.querySelector('.detail-hero').src = img.dataset.img;
-        detailBody.querySelectorAll('[data-img]').forEach(b => b.classList.toggle('current', b === img));
-    }
+    if (img) showHero(img.dataset.img);
 });
 
 document.addEventListener('keydown', e => {
+    if (!lightbox.hidden) {
+        if (e.key === 'Escape') lbClose();
+        if (e.key === 'ArrowRight') lbShow(lbIdx + 1);
+        if (e.key === 'ArrowLeft') lbShow(lbIdx - 1);
+        return;
+    }
     if (detail.hidden) return;
     if (e.key === 'Escape') close();
     if (e.key === 'ArrowRight') step(1);
