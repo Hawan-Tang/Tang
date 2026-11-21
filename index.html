@@ -9,7 +9,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="林唐逸 Tang | Unity × AI × Interactive">
     <meta property="og:description" content="林唐逸 Tang｜Unity、AI 開發與自動化、VR / AR / MR、展場互動裝置">
-    <meta property="og:image" content="https://valley-astronomy-253.notion.site/image/attachment%3Ad05bf5ca-ec2c-4823-bf51-70011477a77f%3A26311D00-9798-46BD-8916-444607D1F69E.jpg?table=block&id=2614a175-899a-8040-97f0-f6a2684ceab0&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=2000&userId=&cache=v2">
+    <meta property="og:image" content="https://tang.support/assets/og/d05bf5ca.jpg">
     <meta property="og:url" content="https://tang.support/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Tang">
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="林唐逸 Tang | Unity × AI × Interactive">
     <meta name="twitter:description" content="林唐逸 Tang｜Unity、AI 開發與自動化、VR / AR / MR、展場互動裝置">
-    <meta name="twitter:image" content="https://valley-astronomy-253.notion.site/image/attachment%3Ad05bf5ca-ec2c-4823-bf51-70011477a77f%3A26311D00-9798-46BD-8916-444607D1F69E.jpg?table=block&id=2614a175-899a-8040-97f0-f6a2684ceab0&spaceId=053f2a42-af3c-4374-9fdc-1b11140cb665&width=2000&userId=&cache=v2">
+    <meta name="twitter:image" content="https://tang.support/assets/og/d05bf5ca.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -26,36 +26,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20261121zzp">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
+            "@sparkjsdev/spark": "https://cdn.jsdelivr.net/npm/@sparkjsdev/spark@2.4.0/dist/spark.module.js"
+        }
+    }
+    </script>
 </head>
 <body>
 
 <header class="top">
-    <a class="brand" href="#">林唐逸 TANG</a>
+    <a class="brand" href="#" data-en="TANG LIN">林唐逸 TANG</a>
     <nav>
-        <a href="#skills-section">技能</a>
-        <a href="#works">作品</a>
-        <a href="#talks">授課</a>
-        <a href="#desk">聯絡</a>
+        <a href="#skills-section" data-en="Skills">技能</a>
+        <a href="#works" data-en="Works">作品</a>
+        <a href="#talks" data-en="Talks">授課</a>
+        <a href="#awards" data-en="Awards">獲獎專利</a>
+        <a href="#desk" data-en="Contact">聯絡</a>
+        <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
 </header>
 
 <!-- ===== 首屏 ===== -->
 <section class="hero">
     <div>
-        <p class="label">EXHIBITION GUIDE / 作品導覽</p>
-        <h1>Unity × AI ×<br>Interactive<span class="tc">林唐逸 Tang</span></h1>
-        <p class="lede">熱衷研究新技術與開發工具，善於運用 AI 解決實際問題，並協助企業將 XR、AI 導入專案，從原型驗證到實際上線。</p>
+        <p class="label" data-en="EXHIBITION GUIDE / PORTFOLIO">EXHIBITION GUIDE / 作品導覽</p>
+        <h1>Unity × AI ×<br>Interactive<span class="tc" data-en="Tang Lin">林唐逸 Tang</span></h1>
+        <p class="lede" data-en="I love exploring new technologies and building tools. I use AI to solve real problems and help companies bring XR and AI into their projects — from prototype to production.">熱衷研究新技術與開發工具，善於運用 AI 解決實際問題，並協助企業將 XR、AI 導入專案，從原型驗證到實際上線。</p>
         <dl class="colophon">
-            <div><dt>年資</dt><dd><b>10</b> 年</dd></div>
-            <div><dt>展品數</dt><dd><b data-count></b> 件</dd></div>
-            <div><dt>專長</dt><dd>Unity 開發、AI 開發與自動化、VR / AR / MR、展場互動裝置</dd></div>
-            <div><dt>信箱</dt><dd><a class="mail" href="mailto:he01409918@gmail.com">he01409918@gmail.com</a></dd></div>
+            <div><dt data-en="Experience">年資</dt><dd data-en="<b>10</b> years"><b>10</b> 年</dd></div>
+            <div><dt data-en="Projects">展品數</dt><dd data-en="<b data-count></b> projects"><b data-count></b> 件</dd></div>
+            <div><dt data-en="Focus">專長</dt><dd data-en="Unity development, AI development &amp; automation, VR / AR / MR, interactive installations">Unity 開發、AI 開發與自動化、VR / AR / MR、展場互動裝置</dd></div>
+            <div><dt data-en="Email">信箱</dt><dd><a class="mail" href="mailto:he01409918@gmail.com">he01409918@gmail.com</a></dd></div>
         </dl>
     </div>
     <div class="hero-photo">
         <figure>
-            <img data-photo alt="林唐逸">
+            <img data-photo alt="林唐逸" data-en-alt="Tang Lin">
             <span class="dot" aria-hidden="true"></span>
         </figure>
     </div>
@@ -63,65 +74,71 @@
 
 <!-- ===== 技能 ===== -->
 <section class="equip" id="skills-section">
-    <div class="section-head flush"><h2>技能清單</h2><span>SKILLS</span></div>
+    <div class="section-head flush"><h2 data-en="Skills">技能清單</h2><span data-en="技能清單">SKILLS</span></div>
     <div id="skills"></div>
 </section>
 
 <!-- ===== 展區篩選 + 作品 ===== -->
-<nav class="zones" id="filters" aria-label="展區"></nav>
-
 <section id="works">
-    <div class="section-head"><h2>展品</h2><span>WORKS · <span data-count></span></span></div>
+    <nav class="zones" id="filters" aria-label="作品分類"></nav>
+    <div class="section-head"><h2 data-en="Works">展品</h2><span data-en="作品 · <span data-count></span>">WORKS · <span data-count></span></span></div>
     <div id="grid"></div>
 </section>
 
+
 <!-- ===== 講座與授課 ===== -->
 <section class="talks" id="talks">
-    <div class="section-head flush"><h2>講座與授課</h2><span>TALKS &amp; TEACHING</span></div>
-    <p class="talks-lede">2017–2020 擔任遊戲開發教學助理、Unity 互動程式校園講師，並受邀至各校擔任業師與課程諮詢委員。</p>
+    <div class="section-head flush"><h2 data-en="Talks &amp; Teaching">講座與授課</h2><span data-en="講座與授課">TALKS &amp; TEACHING</span></div>
+    <p class="talks-lede" data-en="From 2017 to 2020 I worked as a game development teaching assistant and a campus instructor in Unity interactive programming, and I have been invited by schools as an industry mentor and curriculum advisor.">2017–2020 擔任遊戲開發教學助理、Unity 互動程式校園講師，並受邀至各校擔任業師與課程諮詢委員。</p>
     <div class="talk-grid">
         <article class="talk">
             <div class="talk-img"><img src="assets/talks/chianan.jpg" alt="嘉南藥理科技大學授課" loading="lazy"></div>
             <div class="talk-meta"><span class="year">2023</span></div>
-            <h3>嘉南藥理科技大學</h3>
-            <p>高等教育深耕計畫 業界實務師資</p>
+            <h3 data-en="Chia Nan University of Pharmacy &amp; Science">嘉南藥理科技大學</h3>
+            <p data-en="Industry practitioner instructor, Higher Education Sprout Project">高等教育深耕計畫 業界實務師資</p>
         </article>
         <article class="talk">
             <div class="talk-img"><img src="assets/talks/kaoying.jpg" alt="高英工商授課" loading="lazy"></div>
             <div class="talk-meta"><span class="year">2021</span></div>
-            <h3>高英工商</h3>
-            <p>資訊科業師協同教學</p>
+            <h3 data-en="Kao Ying Industrial Commercial Vocational High School">高英工商</h3>
+            <p data-en="Industry co-teacher, Department of Information Technology">資訊科業師協同教學</p>
         </article>
         <article class="talk">
             <div class="talk-img"><img src="assets/talks/chengshiu.jpg" alt="正修科技大學授課" loading="lazy"></div>
             <div class="talk-meta"><span class="year">2018–2020</span></div>
-            <h3>正修科技大學</h3>
-            <p>Unity &amp; Photon 虛擬實境教育訓練</p>
+            <h3 data-en="Cheng Shiu University">正修科技大學</h3>
+            <p data-en="Unity &amp; Photon VR training">Unity &amp; Photon 虛擬實境教育訓練</p>
         </article>
         <article class="talk">
             <div class="talk-img"><img src="assets/talks/pingtung_tech.jpg" alt="屏東科技大學講座" loading="lazy"></div>
             <div class="talk-meta"><span class="year">2018–2020</span></div>
-            <h3>屏東科技大學</h3>
-            <p>虛擬實境基礎開發講座、Nuitrack 體感遊戲</p>
+            <h3 data-en="National Pingtung University of Science and Technology">屏東科技大學</h3>
+            <p data-en="Lectures on VR development fundamentals and Nuitrack motion games">虛擬實境基礎開發講座、Nuitrack 體感遊戲</p>
         </article>
         <article class="talk">
             <div class="talk-img"><img src="assets/talks/pingtung_univ.jpg" alt="屏東大學講座" loading="lazy"></div>
             <div class="talk-meta"><span class="year">2018–2020</span></div>
-            <h3>屏東大學</h3>
-            <p>虛擬實境基礎開發講座</p>
+            <h3 data-en="National Pingtung University">屏東大學</h3>
+            <p data-en="Lectures on VR development fundamentals">虛擬實境基礎開發講座</p>
         </article>
         <article class="talk text-only">
-            <div class="talk-img"><span>課程<br>諮詢委員</span></div>
+            <div class="talk-img"><span data-en="Curriculum<br>Advisor">課程<br>諮詢委員</span></div>
             <div class="talk-meta"><span class="year">2021–2026</span></div>
-            <h3>嘉南藥理科技大學</h3>
-            <p>課程諮詢委員</p>
+            <h3 data-en="Chia Nan University of Pharmacy &amp; Science">嘉南藥理科技大學</h3>
+            <p data-en="Curriculum Advisory Committee member">課程諮詢委員</p>
         </article>
     </div>
 </section>
 
+<!-- ===== 獲獎紀錄 ===== -->
+<section class="awards" id="awards">
+    <div class="section-head flush"><h2 data-en="Awards &amp; Patents">獲獎與專利</h2><span data-en="獲獎與專利">AWARDS &amp; PATENTS</span></div>
+    <div class="award-list" id="award-list"></div>
+</section>
+
 <!-- ===== 聯絡 ===== -->
 <section class="desk" id="desk">
-    <p class="label">INFORMATION DESK / 服務台</p>
+    <p class="label" data-en="INFORMATION DESK / CONTACT">INFORMATION DESK / 服務台</p>
     <a class="big" href="mailto:he01409918@gmail.com">he01409918@gmail.com</a>
     <div class="row"><a href="tel:0900778813">0900-7788-13</a><span>&copy; 2026 Tang</span></div>
 </section>
@@ -139,6 +156,18 @@
     <button type="button" class="lb-btn lb-x" data-lb-close aria-label="關閉">×</button>
 </div>
 
-<script src="script.js"></script>
+<!-- ===== 3DGS 檢視器 ===== -->
+<div class="gs-viewer" id="gs-viewer" role="dialog" aria-modal="true" aria-labelledby="gs-title" hidden>
+    <img class="gs-cover" id="gs-cover" alt="">
+    <div class="gs-stage" id="gs-stage"></div>
+    <div class="gs-progress" id="gs-progress" aria-hidden="true"><span></span></div>
+    <div class="gs-caption"><p id="gs-case"></p><h3 id="gs-title"></h3></div>
+    <div class="gs-count" id="gs-count" aria-hidden="true"></div>
+    <button type="button" class="gs-btn gs-close" id="gs-close" aria-label="關閉"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button type="button" class="gs-btn gs-nav gs-prev" id="gs-prev" aria-label="上一個場景"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button type="button" class="gs-btn gs-nav gs-next" id="gs-next" aria-label="下一個場景"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<script src="script.js?v=20261121zzp"></script>
 </body>
 </html>
