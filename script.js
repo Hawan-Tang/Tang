@@ -801,7 +801,7 @@ const SKILLS = [
     { name: ['渲染與 3D', 'Rendering & 3D'], items: ['Shader Graph', 'VFX Graph', ['3D 高斯潑濺（3DGS）', '3D Gaussian Splatting'], ['點雲 PLY', 'PLY Point Clouds'], ['裸視 3D', 'Glasses-free 3D'], ['3D 模型優化', '3D Model Optimization'], ['材質處理', 'Materials'], ['光影設定', 'Lighting Setup'], ['渲染優化', 'Rendering Optimization']] },
     { name: ['多人連線', 'Networking'], items: ['Server / Client', ['區網自動探索', 'LAN Discovery'], ['斷線自動重連', 'Auto Reconnect'], 'WebSocket / Socket.IO', 'WebRTC', 'Steam P2P / Lobby', 'Photon', 'Mirror', 'FishNet', 'UDP / TCP'] },
     { name: ['後端與雲端', 'Backend & Cloud'], items: ['Firebase Auth / Firestore', 'Realtime Database / Storage', ['Steamworks 成就 / 統計', 'Steamworks Achievements / Stats'], ['Steam Cloud 存檔', 'Steam Cloud Saves'], ['綠界 ECPay 金流', 'ECPay Payments']] },
-    { name: ['AI 開發', 'AI Development'], items: [['Claude Code AI Agent 開發', 'AI-Agent Coding with Claude Code'], ['多 Agent 平行協作', 'Parallel Multi-agent Workflows'], ['LLM / 生成式 AI 串接', 'LLM / Generative AI Integration'], ['MCP 協作', 'MCP Integration'], ['離線語音辨識 + LLM 評分', 'Offline Speech Recognition + LLM Scoring'], ['AI 配音（GPT-SoVITS / F5-TTS / 台語 TTS）', 'AI Voice (GPT-SoVITS / F5-TTS / Taiwanese TTS)'], ['AI 繪圖 / 生成', 'AI Image Generation'], 'LineBot', 'Claude Code Skill', 'AI Agent'] },
+    { name: ['AI 開發', 'AI Development'], items: [['Claude Code AI Agent 開發', 'AI-Agent Coding with Claude Code'], ['多 Agent 平行協作', 'Parallel Multi-agent Workflows'], ['LLM / 生成式 AI 串接', 'LLM / Generative AI Integration'], ['MCP 協作', 'MCP Integration'], ['離線語音辨識 + LLM 評分', 'Offline Speech Recognition + LLM Scoring'], ['AI 配音（台語 TTS）', 'AI Voice (Taiwanese TTS)'], ['AI 繪圖 / 生成', 'AI Image Generation'], 'LineBot', 'Claude Code Skill', 'AI Agent'] },
     { name: ['AI 自動化與經營', 'AI Automation & Operations'], items: [['短片自動產線', 'Automated Short-video Pipeline'], ['自動剪輯', 'Auto Editing'], ['排程發布', 'Scheduled Publishing'], ['自動回復', 'Auto Replies'], ['Claude 瀏覽器自動化', 'Claude Browser Automation'], ['自媒體經營', 'Social Media Operations'], ['系統 / 流程管理', 'Systems / Workflow Management']] }
 ];
 
@@ -1105,7 +1105,7 @@ lightbox.addEventListener('click', e => {
 });
 
 /* 3DGS 場景：點開才載入檢視器；滑過先在背景下載 */
-const gsModule = () => import('./gsviewer.js?v=20261121zzp');
+const gsModule = () => import('./gsviewer.js?v=20261121zzq');
 const gsPrefetched = new Set();
 document.addEventListener('pointerover', e => {
     const b = e.target.closest('[data-scene]');
